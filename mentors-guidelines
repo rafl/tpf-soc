@@ -1,6 +1,6 @@
 Mentors,
 
-this mail is trying lay out some guidelines everyone mentoring a student this
+This mail is trying lay out some guidelines everyone mentoring a student this
 year should be following. I'm trying to keep this as small as possible. If
 you're interested in more reading on your mentoring duties, please refer to
 http://www.booki.cc/gsoc-mentoring/_v/1.0/mind-the-gap/ and the chapters
@@ -11,8 +11,8 @@ Backup mentors
 ==============
 
 This year, given the number of slots we were assigned and the huge amount of
-mentors at our disposal, we have the luxury of giving each student two mentors,
-to reduce the load on the mentors, to provide the student with more feedback,
+mentors at our disposal, we have the luxury of giving each student two mentors
+to reduce the load on the mentors, to provide the student with more feedback
 and to be able to detect problems early.
 
 However, each project can only have one assigned mentor. I'll refer to that
@@ -32,17 +32,17 @@ mentoring tasks.
 Make sure your student is ready to start working before he has to
 =================================================================
 
-After the participating students have been announced on April the 25th, go talk
+After the participating students have been announced on April the 25th, go and talk
 to your students and help sort out possible problems they might have getting
 started on their projects.
 
-Some of the projects require some prelimary work to be done, for others the
+Some of the projects require some prelimary work to be done. For others the
 student might still have to familiarise himself with the version control system
 being used, the coding style he's expected to use, and similar things. Make sure
 that happens - help out as necessary.
 
-If not already done, work with the student on the schedule for the first few
-weeks of the project.
+If you've not already done so, work with the student to ensure that the schedule for the first few
+weeks of the project is agreed on..
 
 
 Keep in touch with the student
@@ -57,7 +57,7 @@ feedback on his report. That includes correcting a wrong path the student might
 have chosen, providing feedback for the code written that week, as well as
 setting your expectations for next week.
 
-Try to figure out what problems the student is face with and provide
+Try to figure out what problems the student is faced with and provide
 guidance. Don't assume the student will always proactively ask for help.
 
 If the student fails to provide his report in a timely fashion without giving
@@ -73,14 +73,14 @@ work out a plan to fix things.
 Maintain a schedule
 ===================
 
-The students already provided a project schedule with their applications. Use
+The students have already provided a project schedule with their applications. Use
 that as a basis and maintain it throughout the summer, amending it based on the
 progress of your student. Any changes to the schedule should be made in
 agreement with the student. Make sure the student always has an up-to-date copy
 of the schedule.
 
 This is particularly important because the completion of the schedule is an
-essential criteria for student evaluation, both mid-term and at the end of the
+essential criterion for student evaluation, both mid-term and at the end of the
 summer.
 
 
@@ -99,12 +99,12 @@ Only the primary mentor is able to fill out evaluations on the melange site.
 The grades in the evaluations should never be a surprise to the student. Based
 on the weekly feedback to his progress report as well as the current progress on
 his schedule, the student should already have a good idea on where he
-stands. It's the mentor's job to make sure he has. Additionally, if things
+stands. It's the mentor's job to make sure he has that understanding. Additionally, if things
 aren't going well, be sure to get in touch with your backup mentor and me early
 on, so we can try to come up with a plan for rescuing the project without
 failing it.
 
-If in doubt whether to pass or fail your student, err on the side of failing. A
-project that has gotten badly off track tends to be very hard to rescue. It's
+If in doubt as to whether to pass or fail your student, err on the side of failing. A
+project that has got badly off track tends to be very hard to rescue. It's
 often better to cut your losses than to prolong suffering on both the mentor and
 the student-side.
