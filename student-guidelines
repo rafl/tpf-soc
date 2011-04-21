@@ -19,15 +19,14 @@ mentor. That's your primary mentor. The second person listed next to your
 project in the previously announced list of accepted projects is your backup
 mentor.
 
-It's up to the mentors of your project to decide how they want to divide
-the mentoring duties. Your mentors will let you know how
-things are going to work. However, one thing the backup mentor
-absolutely must do is to follow the progress of your project. That's why all
-communication you're having with your mentor should, where possible, be
-available to your backup mentor as well. For emails, Cc him or make sure he's
-subscribed to the mailing list you're discussing your progress on. If you're
-discussing things on IRC, try to do it in a channel where both of your mentors
-are present.
+It's up to the mentors of your project to decide how they want to divide the
+mentoring duties. Your mentors will let you know how things are going to
+work. However, one thing the backup mentor absolutely must do is to follow the
+progress of your project. That's why all communication you're having with your
+mentor should, where possible, be available to your backup mentor as well. For
+emails, Cc him or make sure he's subscribed to the mailing list you're
+discussing your progress on. If you're discussing things on IRC, try to do it in
+a channel where both of your mentors are present.
 
 I recommend you get in touch with your mentors early. Say hi in an email or on
 IRC - they're all nice guys and as excited about your projects as you are.
@@ -40,7 +39,8 @@ Now that you're accepted the summer of code program suggests that you prepare
 yourself for the coming tasks. Some of your projects require preliminary
 work. Make sure you'll manage to finish that before the coding period
 starts. Familiarise yourself with the version control system being used for the
-project you're working on, find out what coding style you're expected to use, etc.
+project you're working on, find out what coding style you're expected to use,
+etc.
 
 All these things are excellent opportunities to get involved in the community
 you'll be working with. Sign up for the development mailing list of your project
@@ -49,8 +49,8 @@ learn to find your way around it and experiment. Ask questions as they come
 up. Get to know some of the other contributors. Your mentors will be happy to
 introduce you.
 
-Be sure to get to the point where you can actually start your work when the coding
-period begins on May 23.
+Be sure to get to the point where you can actually start your work when the
+coding period begins on May 23.
 
 
 Regular status reports
@@ -82,11 +82,10 @@ fashion, please give your mentors advance notice and try to explain what the
 problem is, when it might be over, and what they might be able to do to help you
 fix it.
 
-Please don't miss status reports. It's our primary way to know what
-you're up to, and without knowing that, we can't help you. For a successful
-summer of code project, good communication is essential. Failures to communicate
-will lead to failing projects almost all the time. Try not to fail at
-communication :-)
+Please don't miss status reports. It's our primary way to know what you're up
+to, and without knowing that, we can't help you. For a successful summer of code
+project, good communication is essential. Failures to communicate will lead to
+failing projects almost all the time. Try not to fail at communication :-)
 
 Similarly, if your mentors fail you and don't provide feedback to your status
 reports or replies to your questions in a reasonable amount of time, make that
@@ -97,10 +96,10 @@ time as possible waiting and doing nothing.
 Be proactive
 ============
 
-If you ever get lost or run into a problem you're not able to solve on
-your own in a reasonable amount of time, don't wait for your mentors to notice
-that on their own and offer their help. Instead, ask questions early and
-often. That's one of the most important things mentors are there for.
+If you ever get lost or run into a problem you're not able to solve on your own
+in a reasonable amount of time, don't wait for your mentors to notice that on
+their own and offer their help. Instead, ask questions early and often. That's
+one of the most important things mentors are there for.
 
 If you don't understand your mentor's answer right away, follow up on it. Ask
 for specific examples, guidance, and suggestions.
@@ -138,9 +137,9 @@ At two points during the summer your work will be evaluated by your mentors:
 once in a mid-term evaluation, due June 15, and once in a final evaluation, due
 August 26.
 
-The most important measure your mentors will use for your evaluations is the project
-schedule you prepared as part of your application. If you're too far behind on
-the milestones in there, being failed becomes quite likely.
+The most important measure your mentors will use for your evaluations is the
+project schedule you prepared as part of your application. If you're too far
+behind on the milestones in there, being failed becomes quite likely.
 
 Make sure to stick to your time-line as close as you can, but also note that the
 schedule is not set in stone. When you and your mentors discover unforeseen
@@ -155,10 +154,11 @@ always be clear about what your mentor's expectations are and how well you're
 currently fulfilling them. If you aren't, bring the issue up, either to your
 mentors or to me privately, and we'll figure things out.
 
-In a similar fashion to how the mentors will evaluate you, you will also be asked to evaluate
-your mentors. And exactly like the grade your mentors will give you shouldn't
-ever be a surprise, your mentors should always know how satisfied you are with
-their performance at any point. If you're unhappy about your mentors' response
-times, the amount of guidance they give you, or the way they communicate, tell
-them! If that doesn't help, drop me an email describing your problem and we'll
-get it sorted out. Don't be shy - we love feedback and want to improve.
+In a similar fashion to how the mentors will evaluate you, you will also be
+asked to evaluate your mentors. And exactly like the grade your mentors will
+give you shouldn't ever be a surprise, your mentors should always know how
+satisfied you are with their performance at any point. If you're unhappy about
+your mentors' response times, the amount of guidance they give you, or the way
+they communicate, tell them! If that doesn't help, drop me an email describing
+your problem and we'll get it sorted out. Don't be shy - we love feedback and
+want to improve.
