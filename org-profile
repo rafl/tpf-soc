@@ -40,8 +40,8 @@ Blog url
   http://news.perlfoundation.org/
 
 Tags
-  bioperl, bricolage, catalyst, cpan, dancer, dbix-class, mojo, mojolicious,
-  moose, otrs, padre, perl, perl5, perl6, plack, rakudo, rdf, sdl
+  bioperl, bricolage, c, catalyst, cpan, dancer, dbix-class, mojo, mojolicious,
+  moose, otrs, padre, perl, perl5, perl6, plack, rakudo, rdf, sdl, xs
 
 Short name
   TPF
