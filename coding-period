@@ -1,0 +1,68 @@
+Hey everyone,
+
+as of today, the community bonding period is over. I'm quite pleased by
+how well things have been going so far. Besides getting to know your
+mentors and communities and making plans for your work during the
+summer, many of you have done much more such as fixing bugs in your
+project's code base or already starting on the implementation your
+tasks.
+
+That's just marvellous! I'm confident things will continue to go equally
+well during all of the summer.
+
+However, now, with the beginning of the coding period, things will
+change slightly. Some of you already shared their progress with the
+community through either status reports to the mailing list or blog
+posts, which I'm very happy about. Those of you that did should continue
+to do so. Those of you that haven't started keeping the rest of us up to
+date on what they're doing yet should start doing so now, as status
+reports are becoming mandatory as of this week in order for your mentors
+to have enough data to provide you with help and guidance as necessary.
+
+
+Some of you weren't entirely clear on how exactly those reports should
+look like. Of course, that's entirely my fault for being much to vague
+when describing them initially. I'll try to clarify a bit. If I still
+fail at answering all the questions you might have about them, please do
+follow up.
+
+Progress reports aren't supposed to be very formal. If you feel more
+comfortable with writing short bullet-lists, do so instead of putting
+all too much effort into writing little essays.
+
+Reports are to be sent to the tpf-gsoc-students@googlegroups.com
+list. Just blogging isn't enough, and neither is sending a link to a
+blog post to the list. We need the actual text of the report sent to the
+list. However, if you feel like publicising your reports in other ways
+such as your blog, a git repository, or whatever, that's fine of course.
+
+Additionally, reports also need to be sent directly to all of your
+mentors, a list they're all subscribed to, or similar.
+
+It's not necessary for the reports to contain actual code. If you're
+having a particular problem with a certain piece of code, link to it
+after committing it somewhere, possibly to a branch. Similarly, to share
+the code you've written in a week, linking to the commits in your
+repository is sufficient.
+
+While it's up to you to decide how much information your reports will
+contain, the bare minimum will have to consist of a brief description of
+the things you've done last week (even if it's as short as "nothing -
+I've been preparing for my math finals"), what problems you're currently
+facing, if any, (be they related to design, implementation, or
+whatever), and what you plan to do during the following week (the next
+milestone you'll be trying to tackle, the exam you'll need to prepare
+for, or whatever).
+
+In addition to that, an evaluation of your progress made so far and a
+comparison with your project's time-line and milestones would be
+appreciated. If you feel like you're not progressing as fast as or
+faster than you expected and believe the time-line might need adjusting,
+do say so.
+
+Of course, your progress reports are also the right place to include any
+other information that you deem important for your project.
+
+
+I'm very much looking forward to your reports as well as your work
+during the summer. I hope you do as well.
