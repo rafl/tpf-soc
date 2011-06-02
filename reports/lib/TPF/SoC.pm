@@ -40,6 +40,7 @@ has students_fh => (
 has students => (
     is           => 'ro',
     isa          => HashRef[Student],
+    lifecycle    => 'Singleton',
     dependencies => ['student_parser', 'students_fh'],
     block        => fun ($s) {
         return {
@@ -98,6 +99,7 @@ has reports_fh => (
 has reports => (
     is           => 'ro',
     isa          => ArrayRef[Report],
+    lifecycle    => 'Singleton',
     dependencies => ['report_parser', 'reports_fh'],
     block        => fun ($s) {
         return [sort {
