@@ -1,0 +1,10 @@
+| andrewalker | André Walker     | andre@andrewalker.net | Rework Catalyst component setup code                                |
+| gnusosa     | Carlos Sosa      | gnusosa.mx@gmail.com  | Removing the upgrading necessity of the Dancer script with a module |
+| Hugmeir     | Brian Fraser     | fraserbn@gmail.com    | Making the Perl Core UTF-8 clean                                    |
+| marcg       | Marc Green       | ponguile@gmail.com    | Standardization of core documentation parsing tools                 |
+| mo          | Moritz Onken     | onken@netcubed.de     | CPAN search for the modern web                                      |
+| tadzik      | Tadeusz Sośnierz | tadzikes@gmail.com    | Pod parser for Rakudo                                               |
+
+# Local Variables:
+# mode: org
+# End:
