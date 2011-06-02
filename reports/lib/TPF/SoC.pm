@@ -20,7 +20,7 @@ has student_class => (
 has student_fields => (
     is    => 'ro',
     isa   => ArrayRef[NonEmptySimpleStr],
-    value => sub { [qw(nick name email project_title blog)] },
+    block => sub { [qw(nick name email project_title blog)] },
 );
 
 has student_parser => (
@@ -62,7 +62,7 @@ has report_class => (
 has report_fields => (
     is    => 'ro',
     isa   => ArrayRef[NonEmptySimpleStr],
-    value => sub { [qw(student date url)] },
+    block => sub { [qw(student date url)] },
 );
 
 has report_args_mangler => (
