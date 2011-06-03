@@ -44,7 +44,7 @@ __DATA__
 # Even though this is based on the actual data as of June 3, this is fake data
 # to trigger some corner cases
 
-| marcg       | Tue, 17 May 2011 00:29:57 +0200 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/ce20c2a82d81baae# |
+| marcg       | Tue, 17 May 2011 00:29:57 -0400 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/ce20c2a82d81baae# |
 | gnusosa     | Tue, 24 May 2011 10:28:31 -0700 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/dd1407956d333e95# |
 | marcg       | Thu, 26 May 2011 17:52:15 -0400 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/665d16ad938721c2# |
 | andrewalker | Sat, 28 May 2011 11:44:30 -0300 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/feadee4d20b87a29# |
