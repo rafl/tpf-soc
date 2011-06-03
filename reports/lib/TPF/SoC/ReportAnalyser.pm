@@ -46,10 +46,7 @@ method analyse (@reports) {
     my $next_reporting_deadline = $self->next_reporting_date($last_reporting_start);
     my $next_expected_reporting_date = $next_reporting_deadline;
 
-    warn $reports[0]->student->nick;
-
     my @reporting_periods;
-
     while ($last_reporting_start <= $now && $next_reporting_start < $self->reporting_period_end) {
         my @reports_in_period;
         while (@reports && $reports[0]->date < $next_reporting_deadline) {
@@ -70,9 +67,6 @@ method analyse (@reports) {
                 report             => $report,
                 expected_next_date => $next_expected_reporting_date,
             });
-
-            warn "report before deadline (" . $report->date . ")";
-            warn "(next expected at $next_expected_reporting_date)";
         }
 
         unless (@reports_in_period) {
@@ -82,13 +76,8 @@ method analyse (@reports) {
                         date          => $now,
                         expected_date => $next_expected_reporting_date,
                     });
-
-                    warn "no report yet for week until " . $next_reporting_deadline
-                        . " even though it was expected to arrive before " . $next_expected_reporting_date;
                 }
-                else {
-                    warn "no report yet for week until " . $next_reporting_deadline;
-                }
+                # else { no report yet, but we didn't expect it yet anyway }
             }
             else {
                 $next_expected_reporting_date = $self->next_reporting_date(
@@ -99,9 +88,6 @@ method analyse (@reports) {
                     date               => $next_reporting_deadline,
                     expected_next_date => $next_expected_reporting_date,
                 });
-
-                warn "missed deadline for week until " . $next_reporting_deadline;
-                warn "(next expected at $next_expected_reporting_date)";
             }
         }
 
@@ -117,8 +103,6 @@ method analyse (@reports) {
         $next_reporting_start = $self->next_reporting_date($last_reporting_start);
         $next_reporting_deadline = $self->next_reporting_date($next_reporting_deadline);
     }
-
-    print "\n";
 
     return \@reporting_periods;
 }
