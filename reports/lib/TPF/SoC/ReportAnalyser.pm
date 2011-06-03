@@ -36,6 +36,11 @@ has analysis_time => (
 
 method next_reporting_date ($dt) { $dt + $self->reporting_interval }
 
+{
+    my $one_day = DateTime::Duration->new(days => 1);
+    method _round_up_one_day ($dt) { $dt + $one_day }
+}
+
 # assume reports are sorted by date
 method analyse (@reports) {
     my $now = $self->analysis_time;
@@ -55,9 +60,11 @@ method analyse (@reports) {
 
         my @events;
         for my $report (@reports_in_period) {
-            $next_expected_reporting_date = $self->next_reporting_date(
-                $report->date->clone->truncate(to => 'day'),
-            ) + DateTime::Duration->new(days => 1);
+            $next_expected_reporting_date = $self->_round_up_one_day(
+                $self->next_reporting_date(
+                    $report->date->clone->truncate(to => 'day'),
+                ),
+            );
 
             my $event_class = @reports_in_period > 1
                 ? BonusReportEvent : TimelyReportEvent;
