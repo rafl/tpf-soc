@@ -22,11 +22,17 @@ has reporting_interval => (
     required => 1,
 );
 
+has analysis_time => (
+    is       => 'ro',
+    isa      => DateTimeType,
+    required => 1,
+);
+
 method next_reporting_date ($dt) { $dt + $self->reporting_interval }
 
 # assume reports are sorted by date
 method analyse (@reports) {
-    my $now = DateTime->now(time_zone => 'local');
+    my $now = $self->analysis_time;
 
     my $last_reporting_start = $self->reporting_period_start;
 

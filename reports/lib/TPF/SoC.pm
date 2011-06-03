@@ -2,9 +2,10 @@ package TPF::SoC;
 
 use Moose;
 use syntax 'function';
+use DateTime;
 use MooseX::Types::Moose 'ArrayRef', 'HashRef';
 use MooseX::Types::Path::Class 'File';
-use MooseX::Types::DateTime 'DateTime', 'Duration';
+use MooseX::Types::DateTime DateTime => { -as => 'DateTimeType' }, 'Duration';
 use MooseX::Types::LoadableClass 'LoadableClass';
 use MooseX::Types::Common::String 'NonEmptySimpleStr';
 use TPF::SoC::Types qw(Student Report DateTimeSpan ReportAnalyser);
@@ -128,7 +129,7 @@ has student_reports => (
 
 has [map { "reporting_period_${_}" } qw(start end)] => (
     is  => 'ro',
-    isa => DateTime,
+    isa => DateTimeType,
 );
 
 has reporting_period => (
@@ -144,10 +145,16 @@ has reporting_interval => (
     isa => Duration,
 );
 
+has analysis_time => (
+    is    => 'ro',
+    isa   => DateTimeType,
+    block => fun { DateTime->now(time_zone => 'local') },
+);
+
 has report_analyser => (
     is           => 'ro',
     isa          => ReportAnalyser,
-    dependencies => ['reporting_period', 'reporting_interval'],
+    dependencies => ['reporting_period', 'reporting_interval', 'analysis_time'],
 );
 
 __PACKAGE__->meta->make_immutable;
