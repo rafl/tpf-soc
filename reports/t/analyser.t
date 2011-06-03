@@ -7,11 +7,9 @@ use DateTime;
 use Path::Class;
 use DateTime;
 use DateTime::Duration;
+use DateTime::Format::Mail;
 
 use TPF::SoC;
-
-# TODO: Time::Warp to Fri, 03 Jun 2011 02:39:45 +0200 so we trigger all the
-#       conditions.
 
 my $students_list = dir($FindBin::Bin)->parent->file('students');
 
@@ -31,6 +29,7 @@ my $c = TPF::SoC->new({
         time_zone => 'UTC',
     ),
     reporting_interval => DateTime::Duration->new(weeks => 1),
+    analysis_time      => DateTime::Format::Mail->parse_datetime('Fri, 03 Jun 2011 02:39:45 +0200'),
 });
 
 $c->report_analyser->analyse(
