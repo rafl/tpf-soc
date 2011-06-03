@@ -29,7 +29,6 @@ method analyse (@reports) {
     my $now = DateTime->now(time_zone => 'local');
 
     my $last_reporting_start = $self->reporting_period_start;
-    my $last_reporting_date  = $last_reporting_start;
 
     my $next_reporting_deadline = $self->next_reporting_date($last_reporting_start);
     my $next_expected_reporting_date = $next_reporting_deadline;
@@ -48,9 +47,8 @@ method analyse (@reports) {
             my $report = shift @reports;
             $reports_consumed++;
 
-            $last_reporting_date = $report->date;
             $next_expected_reporting_date = $self->next_reporting_date(
-                $last_reporting_date->truncate(to => 'day'),
+                $report->date->clone->truncate(to => 'day'),
             ) + DateTime::Duration->new(days => 1);
 
             warn "report before deadline (" . $report->date . ")";
