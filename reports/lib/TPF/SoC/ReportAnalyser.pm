@@ -51,19 +51,12 @@ method analyse (@reports) {
     my @reporting_periods;
 
     while ($last_reporting_start <= $now && $next_reporting_start < $self->reporting_period_end) {
-        warn $next_reporting_deadline;
-
-        my @events;
-
-        if ($next_expected_reporting_date > $next_reporting_deadline) {
-            die "$next_expected_reporting_date > $next_reporting_deadline";
-        }
-
         my @reports_in_period;
         while (@reports && $reports[0]->date < $next_reporting_deadline) {
             push @reports_in_period, shift @reports;
         }
 
+        my @events;
         for my $report (@reports_in_period) {
             $next_expected_reporting_date = $self->next_reporting_date(
                 $report->date->clone->truncate(to => 'day'),
