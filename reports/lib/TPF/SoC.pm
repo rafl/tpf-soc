@@ -4,9 +4,10 @@ use Moose;
 use syntax 'function';
 use MooseX::Types::Moose 'ArrayRef', 'HashRef';
 use MooseX::Types::Path::Class 'File';
+use MooseX::Types::DateTime 'DateTime';
 use MooseX::Types::LoadableClass 'LoadableClass';
 use MooseX::Types::Common::String 'NonEmptySimpleStr';
-use TPF::SoC::Types 'Student', 'Report';
+use TPF::SoC::Types qw(Student Report DateTimeSpan DateTimeRecurrence ReportAnalyser);
 use Bread::Board::Declare;
 use namespace::autoclean;
 
@@ -108,6 +109,45 @@ has reports => (
             $s->param('reports_fh'),
         )];
     },
+);
+
+has student_reports => (
+    is           => 'ro',
+    isa          => HashRef[ArrayRef[Report]],
+    lifecycle    => 'Singleton',
+    dependencies => ['reports'],
+    block        => fun ($s) {
+        my %student_reports;
+
+        push @{ $student_reports{ $_->student->nick } ||= [] }, $_
+            for @{ $s->param('reports') };
+
+        return \%student_reports;
+    },
+);
+
+has [map { "reporting_period_${_}" } qw(start end)] => (
+    is  => 'ro',
+    isa => DateTime,
+);
+
+has reporting_period => (
+    is           => 'ro',
+    isa          => DateTimeSpan,
+    dependencies => {
+        map { ($_ => "reporting_period_${_}") } qw(start end),
+    },
+);
+
+has reporting_interval => (
+    is  => 'ro',
+    isa => DateTimeRecurrence,
+);
+
+has report_analyser => (
+    is           => 'ro',
+    isa          => ReportAnalyser,
+    dependencies => ['reporting_period', 'reporting_interval'],
 );
 
 __PACKAGE__->meta->make_immutable;

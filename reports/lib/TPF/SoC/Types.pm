@@ -1,6 +1,10 @@
 package TPF::SoC::Types;
 
-use MooseX::Types -declare => ['RFC2822Date', 'Student', 'Report'];
+use MooseX::Types -declare => [
+    'RFC2822Date',
+    'DateTimeSpan', 'DateTimeRecurrence',
+    'Student', 'Report', 'ReportAnalyser',
+];
 
 use MooseX::Types::Moose 'Str';
 use MooseX::Types::DateTime 'DateTime';
@@ -12,7 +16,11 @@ coerce RFC2822Date, from Str, via {
     DateTime::Format::Mail->parse_datetime($_);
 };
 
+class_type DateTimeSpan, { class => 'DateTime::Span' };
+duck_type DateTimeRecurrence, ['next'];
+
 class_type Student, { class => 'TPF::SoC::Student' };
 class_type Report, { class => 'TPF::SoC::Report' };
+class_type ReportAnalyser, { class => 'TPF::SoC::ReportAnalyser' };
 
 1;
