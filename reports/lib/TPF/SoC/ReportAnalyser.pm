@@ -18,7 +18,7 @@ has reporting_period => (
     isa      => DateTimeSpan,
     required => 1,
     handles  => {
-        map { ("reporting_period_${_}" => $_) }qw(start end),
+        map { ("reporting_period_${_}" => $_) } qw(start end),
     },
 );
 
