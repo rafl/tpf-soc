@@ -1,9 +1,9 @@
-| andrewalker | André Walker     | andre@andrewalker.net | Rework Catalyst component setup code                                | http://perl.andrewalker.net/ |
-| gnusosa     | Carlos Sosa      | gnusosa.mx@gmail.com  | Removing the upgrading necessity of the Dancer script with a module | http://log.gnusosa.net/      |
-| Hugmeir     | Brian Fraser     | fraserbn@gmail.com    | Making the Perl Core UTF-8 clean                                    |                              |
-| marcg       | Marc Green       | ponguile@gmail.com    | Standardization of core documentation parsing tools                 |                              |
-| mo          | Moritz Onken     | onken@netcubed.de     | CPAN search for the modern web                                      |                              |
-| tadzik      | Tadeusz Sośnierz | tadzikes@gmail.com    | Pod parser for Rakudo                                               | http://ttjjss.wordpress.com/ |
+| andrewalker | André Walker     | andre@andrewalker.net | Rework Catalyst component setup code                                | http://perl.andrewalker.net/    |
+| gnusosa     | Carlos Sosa      | gnusosa.mx@gmail.com  | Removing the upgrading necessity of the Dancer script with a module | http://log.gnusosa.net/         |
+| Hugmeir     | Brian Fraser     | fraserbn@gmail.com    | Making the Perl Core UTF-8 clean                                    |                                 |
+| marcg       | Marc Green       | ponguile@gmail.com    | Standardization of core documentation parsing tools                 |                                 |
+| mo          | Moritz Onken     | onken@netcubed.de     | CPAN search for the modern web                                      | http://blogs.perl.org/users/mo/ |
+| tadzik      | Tadeusz Sośnierz | tadzikes@gmail.com    | Pod parser for Rakudo                                               | http://ttjjss.wordpress.com/    |
 
 # Local Variables:
 # mode: org
