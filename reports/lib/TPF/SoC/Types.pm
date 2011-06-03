@@ -2,7 +2,7 @@ package TPF::SoC::Types;
 
 use MooseX::Types -declare => [
     'RFC2822Date',
-    'DateTimeSpan', 'DateTimeRecurrence',
+    'DateTimeSpan',
     'Student', 'Report', 'ReportAnalyser',
 ];
 
@@ -17,7 +17,6 @@ coerce RFC2822Date, from Str, via {
 };
 
 class_type DateTimeSpan, { class => 'DateTime::Span' };
-duck_type DateTimeRecurrence, ['next'];
 
 class_type Student, { class => 'TPF::SoC::Student' };
 class_type Report, { class => 'TPF::SoC::Report' };

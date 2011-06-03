@@ -4,10 +4,10 @@ use Moose;
 use syntax 'function';
 use MooseX::Types::Moose 'ArrayRef', 'HashRef';
 use MooseX::Types::Path::Class 'File';
-use MooseX::Types::DateTime 'DateTime';
+use MooseX::Types::DateTime 'DateTime', 'Duration';
 use MooseX::Types::LoadableClass 'LoadableClass';
 use MooseX::Types::Common::String 'NonEmptySimpleStr';
-use TPF::SoC::Types qw(Student Report DateTimeSpan DateTimeRecurrence ReportAnalyser);
+use TPF::SoC::Types qw(Student Report DateTimeSpan ReportAnalyser);
 use Bread::Board::Declare;
 use namespace::autoclean;
 
@@ -141,7 +141,7 @@ has reporting_period => (
 
 has reporting_interval => (
     is  => 'ro',
-    isa => DateTimeRecurrence,
+    isa => Duration,
 );
 
 has report_analyser => (

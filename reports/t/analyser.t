@@ -27,7 +27,7 @@ my $c = TPF::SoC->new({
         day       => 22,
         time_zone => 'UTC',
     ),
-    reporting_interval => DateTime::Event::Recurrence->weekly,
+    reporting_interval => DateTime::Duration->new(weeks => 1),
 });
 
 $c->report_analyser->analyse(

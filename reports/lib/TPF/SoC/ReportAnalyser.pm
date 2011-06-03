@@ -3,8 +3,8 @@ package TPF::SoC::ReportAnalyser;
 use Moose;
 use syntax 'method';
 use DateTime::Duration;
-use MooseX::Types::DateTime DateTime => { -as => 'DateTimeType' };
-use TPF::SoC::Types 'DateTimeSpan', 'DateTimeRecurrence';
+use MooseX::Types::DateTime DateTime => { -as => 'DateTimeType' }, 'Duration';
+use TPF::SoC::Types 'DateTimeSpan';
 use namespace::autoclean;
 
 has reporting_period => (
@@ -18,12 +18,11 @@ has reporting_period => (
 
 has reporting_interval => (
     is       => 'ro',
-    isa      => DateTimeRecurrence,
+    isa      => Duration,
     required => 1,
-    handles  => {
-        next_reporting_date => 'next',
-    },
 );
+
+method next_reporting_date ($dt) { $dt + $self->reporting_interval }
 
 # assume reports are sorted by date
 method analyse (@reports) {
@@ -52,7 +51,7 @@ method analyse (@reports) {
             $last_reporting_date = $report->date;
             $next_expected_reporting_date = $self->next_reporting_date(
                 $last_reporting_date->truncate(to => 'day'),
-            ) + DateTime::Duration->new(days => 2);
+            ) + DateTime::Duration->new(days => 1);
 
             warn "report before deadline (" . $report->date . ")";
             warn "(next expected at $next_expected_reporting_date)";
