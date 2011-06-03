@@ -88,7 +88,6 @@ method analyse (@reports) {
 
         $last_reporting_start = $next_reporting_start;
         $next_reporting_start = $self->next_reporting_date($last_reporting_start);
-    } continue {
         $next_reporting_deadline = $self->next_reporting_date($next_reporting_deadline);
     }
 
