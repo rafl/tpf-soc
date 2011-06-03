@@ -62,7 +62,7 @@ method analyse (@reports) {
         }
         elsif (!$reports_consumed) {
             if ($next_reporting_deadline > $now) {
-                if ($next_expected_reporting_date > $now) {
+                if ($next_expected_reporting_date < $now) {
                     warn "no report yet for week until " . $next_reporting_deadline
                         . " even though it was expected to arrive before " . $next_expected_reporting_date;
                 }
