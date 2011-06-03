@@ -12,7 +12,7 @@ has reporting_period => (
     isa      => DateTimeSpan,
     required => 1,
     handles  => {
-        reporting_period_start => 'start',
+        map { ("reporting_period_${_}" => $_) }qw(start end),
     },
 );
 
@@ -35,13 +35,14 @@ method analyse (@reports) {
     my $now = $self->analysis_time;
 
     my $last_reporting_start = $self->reporting_period_start;
+    my $next_reporting_start = $self->next_reporting_date($last_reporting_start);
 
     my $next_reporting_deadline = $self->next_reporting_date($last_reporting_start);
     my $next_expected_reporting_date = $next_reporting_deadline;
 
     warn $reports[0]->student->nick;
 
-    while ($last_reporting_start <= $now) {
+    while ($last_reporting_start <= $now && $next_reporting_start < $self->reporting_period_end) {
         warn $next_reporting_deadline;
 
         if ($next_expected_reporting_date > $next_reporting_deadline) {
@@ -85,7 +86,8 @@ method analyse (@reports) {
         }
 
 
-        $last_reporting_start = $self->next_reporting_date($last_reporting_start);
+        $last_reporting_start = $next_reporting_start;
+        $next_reporting_start = $self->next_reporting_date($last_reporting_start);
     } continue {
         $next_reporting_deadline = $self->next_reporting_date($next_reporting_deadline);
     }
