@@ -98,6 +98,22 @@ subtest gnusosa => sub {
     }
 };
 
+subtest andrewalker => sub {
+    my $andres_analysis = $reporting_periods{andrewalker};
+
+    for my $p ($andres_analysis->nth_period(0)) {
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], TimelyReportEvent;
+    }
+
+    for my $p ($andres_analysis->nth_period(1)) {
+        ok !$p->has_events;
+    }
+
+    cmp_ok $andres_analysis->expected_next_date, '>', $c->analysis_time;
+};
+
 done_testing;
 
 __DATA__
