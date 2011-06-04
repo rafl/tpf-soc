@@ -149,3 +149,4 @@ __DATA__
 | Hugmeir     | Mon, 30 May 2011 18:12:35 -0300 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/50e6c5eae3752e75# |
 | gnusosa     | Tue, 31 May 2011 01:23:13 -0700 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/d7f9828554e1cdfe# |
 | tadzik      | Tue, 31 May 2011 22:52:40 +0200 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/3322531de06de289# |
+| mo          | Fri, 03 Jun 2011 13:23:16 +0200 | http://groups.google.com/group/tpf-gsoc-students/browse_thread/thread/81134d1f15e8b851# |
