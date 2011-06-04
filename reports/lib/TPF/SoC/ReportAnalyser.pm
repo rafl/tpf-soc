@@ -6,6 +6,7 @@ use DateTime::Span;
 use DateTime::Duration;
 use MooseX::Types::DateTime DateTime => { -as => 'DateTimeType' }, 'Duration';
 use TPF::SoC::Types 'DateTimeSpan';
+use aliased 'TPF::SoC::ReportAnalysis', 'Analysis';
 use aliased 'TPF::SoC::ReportingPeriod';
 use aliased 'TPF::SoC::ReportingPeriod::Event::Timely', 'TimelyReportEvent';
 use aliased 'TPF::SoC::ReportingPeriod::Event::Bonus', 'BonusReportEvent';
@@ -118,7 +119,9 @@ method analyse (@reports) {
         $next_reporting_deadline = $self->next_reporting_date($next_reporting_deadline);
     }
 
-    return \@reporting_periods;
+    return Analysis->new({
+        periods => \@reporting_periods,
+    });
 }
 
 __PACKAGE__->meta->make_immutable;

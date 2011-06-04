@@ -42,15 +42,15 @@ my %reporting_periods = map {
 
 
 for my $nick (keys %reporting_periods) {
-    is @{ $reporting_periods{$nick} }, 2;
+    is $reporting_periods{$nick}->n_periods, 2;
     isa_ok $_, 'TPF::SoC::ReportingPeriod'
-        for @{ $reporting_periods{$nick} };
+        for $reporting_periods{$nick}->periods;
 }
 
 {
-    my $marcs_reports = $reporting_periods{marcg};
+    my $marcs_analysis = $reporting_periods{marcg};
 
-    for my $p ($marcs_reports->[0]) {
+    for my $p ($marcs_analysis->nth_period(0)) {
         ok $p->finished( $c->analysis_time );
         ok $p->has_events,
             'every finished period must have at least one event';
@@ -61,7 +61,7 @@ for my $nick (keys %reporting_periods) {
         isa_ok $e[2], BonusReportEvent, 'second report in reporting period';
     }
 
-    for my $p ($marcs_reports->[1]) {
+    for my $p ($marcs_analysis->nth_period(1)) {
         ok !$p->finished( $c->analysis_time );
         ok $p->has_events;
 
