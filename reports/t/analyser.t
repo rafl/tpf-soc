@@ -47,7 +47,7 @@ for my $nick (keys %reporting_periods) {
         for $reporting_periods{$nick}->periods;
 }
 
-{
+subtest marcg => sub {
     my $marcs_analysis = $reporting_periods{marcg};
 
     for my $p ($marcs_analysis->nth_period(0)) {
@@ -73,7 +73,7 @@ for my $nick (keys %reporting_periods) {
 
         cmp_ok $e[0]->date, '<', $marcs_analysis->expected_next_date;
     }
-}
+};
 
 done_testing;
 
