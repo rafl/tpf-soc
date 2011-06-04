@@ -14,10 +14,10 @@ has span => (
 
 has events => (
     traits   => ['Array'],
-    is       => 'ro',
     isa      => ArrayRef[ReportingEvent],
     required => 1,
     handles  => {
+        events     => 'elements',
         has_events => 'count',
     },
 );
