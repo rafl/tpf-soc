@@ -13,9 +13,13 @@ has span => (
 );
 
 has events => (
+    traits   => ['Array'],
     is       => 'ro',
     isa      => ArrayRef[ReportingEvent],
     required => 1,
+    handles  => {
+        has_events => 'count',
+    },
 );
 
 __PACKAGE__->meta->make_immutable;
