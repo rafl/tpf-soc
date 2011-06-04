@@ -1,7 +1,8 @@
 package TPF::SoC::ReportingPeriod;
 
 use Moose;
-use TPF::SoC::Types 'DateTimeSpan';
+use MooseX::Types::Moose 'ArrayRef';
+use TPF::SoC::Types 'DateTimeSpan', 'ReportingEvent';
 use namespace::autoclean;
 
 has span => (
@@ -12,7 +13,9 @@ has span => (
 );
 
 has events => (
-    is => 'ro',
+    is       => 'ro',
+    isa      => ArrayRef[ReportingEvent],
+    required => 1,
 );
 
 __PACKAGE__->meta->make_immutable;
