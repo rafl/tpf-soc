@@ -87,6 +87,8 @@ method analyse (@reports) {
         unless (@reports_in_period) {
             if ($next_reporting_deadline > $now) {
                 if ($next_expected_reporting_date < $now) {
+                    # FIXME: generate those if one of the reports consumed
+                    # earlier was past its expected date
                     push @events, MissedExpectedDeadlineEvent->new({
                         date          => $now,
                         expected_date => $next_expected_reporting_date,
