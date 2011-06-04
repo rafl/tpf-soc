@@ -1,7 +1,7 @@
 package TPF::SoC;
 
 use Moose;
-use syntax 'function';
+use syntax 'function', 'method';
 use DateTime;
 use Config::Any;
 use MooseX::Types::Moose 'ArrayRef', 'HashRef';
@@ -189,6 +189,28 @@ has report_analyser => (
     isa          => ReportAnalyser,
     dependencies => ['reporting_period', 'reporting_interval', 'analysis_time'],
 );
+
+has student_report_analyses => (
+    is           => 'ro',
+    isa          => HashRef[ReportAnalysis],
+    dependencies => ['report_analyser', 'student_reports', 'students'],
+    block        => fun ($s, $c) {
+        my $analyser = $s->param('report_analyser');
+        my $reports = $s->param('student_reports');
+
+        return {
+            map {
+                ($_->nick => $c->student_report_analysis($_))
+            } values %{ $s->param('students') },
+        };
+    },
+);
+
+method student_report_analysis ($student) {
+    $self->report_analyser->analyse(
+        @{ $self->student_reports->{ $student->nick } },
+    );
+}
 
 __PACKAGE__->meta->make_immutable;
 
