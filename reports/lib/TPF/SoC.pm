@@ -3,6 +3,7 @@ package TPF::SoC;
 use Moose;
 use syntax 'function';
 use DateTime;
+use Config::Any;
 use MooseX::Types::Moose 'ArrayRef', 'HashRef';
 use MooseX::Types::Path::Class 'File';
 use MooseX::Types::DateTime DateTime => { -as => 'DateTimeType' }, 'Duration';
@@ -11,6 +12,26 @@ use MooseX::Types::Common::String 'NonEmptySimpleStr';
 use TPF::SoC::Types qw(Student Report DateTimeSpan ReportAnalyser);
 use Bread::Board::Declare;
 use namespace::autoclean;
+
+has config_file => (
+    is     => 'ro',
+    isa    => File,
+    coerce => 1,
+);
+
+has config => (
+    is           => 'ro',
+    isa          => HashRef,
+    dependencies => ['config_file'],
+    block        => fun ($s) {
+        Config::Any->load_files({
+            files   => [$s->param('config_file')],
+            use_ext => 1,
+        })->[0]->{
+            $s->param('config_file')
+        };
+    },
+);
 
 has student_class => (
     is     => 'ro',
