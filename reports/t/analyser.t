@@ -33,13 +33,12 @@ my $c = TPF::SoC->new({
         time_zone => 'UTC',
     ),
     reporting_interval => DateTime::Duration->new(weeks => 1),
-    analysis_time      => DateTime::Format::Mail->parse_datetime('Fri, 03 Jun 2011 02:39:45 +0200'),
+    analysis_time      => DateTime::Format::Mail->parse_datetime('Fri, 03 Jun 2011 06:39:45 +0200'),
 });
 
 my %reporting_periods = map {
     ($_ => $c->report_analyser->analyse(@{ $c->student_reports->{$_} }))
 } keys %{ $c->students };
-
 
 for my $nick (keys %reporting_periods) {
     is $reporting_periods{$nick}->n_periods, 2;
@@ -77,7 +76,7 @@ subtest marcg => sub {
         is $marcs_analysis->expected_next_date,
            $marcs_analysis->nth_period(0)->expected_next_date;
 
-        cmp_ok $e[0]->date, '<', $marcs_analysis->expected_next_date;
+        cmp_ok $e[0]->date, '>', $marcs_analysis->expected_next_date;
     }
 };
 

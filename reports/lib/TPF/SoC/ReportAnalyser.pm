@@ -86,7 +86,7 @@ method analyse (@reports) {
 
         unless (@reports_in_period) {
             if ($next_reporting_deadline > $now) {
-                if ($next_expected_reporting_date > $now) {
+                if ($next_expected_reporting_date < $now) {
                     push @events, MissedExpectedDeadlineEvent->new({
                         date          => $now,
                         expected_date => $next_expected_reporting_date,
