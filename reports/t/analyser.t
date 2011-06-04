@@ -151,6 +151,25 @@ subtest mo => sub {
     }
 };
 
+subtest tadzik => sub {
+    my $tadeusz_analysis = $reporting_periods{tadzik};
+
+    for my $p ($tadeusz_analysis->nth_period(0)) {
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], MissedDeadlineEvent;
+    }
+
+    for my $p ($tadeusz_analysis->nth_period(1)) {
+        ok $p->has_events;
+
+        my @e = $p->events;
+        is @e, 2;
+        isa_ok $e[0], TimelyReportEvent;
+        isa_ok $e[1], BonusReportEvent;
+    }
+};
+
 done_testing;
 
 __DATA__
