@@ -132,6 +132,25 @@ subtest Hugmeir => sub {
     }
 };
 
+subtest mo => sub {
+    my $moritz_analysis = $reporting_periods{mo};
+
+    for my $p ($moritz_analysis->nth_period(0)) {
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], MissedDeadlineEvent;
+    }
+
+    for my $p ($moritz_analysis->nth_period(1)) {
+        ok $p->has_events;
+
+        my @e = $p->events;
+        is @e, 2;
+        isa_ok $e[0], TimelyReportEvent;
+        isa_ok $e[1], BonusReportEvent;
+    }
+};
+
 done_testing;
 
 __DATA__
