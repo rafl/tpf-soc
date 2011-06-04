@@ -1,6 +1,9 @@
 package TPF::SoC::ReportingPeriod;
 
+use 5.010;
 use Moose;
+use syntax 'method';
+use DateTime;
 use MooseX::Types::Moose 'ArrayRef';
 use TPF::SoC::Types 'DateTimeSpan', 'ReportingEvent';
 use namespace::autoclean;
@@ -21,5 +24,10 @@ has events => (
         has_events => 'count',
     },
 );
+
+method finished ($dt) {
+    $dt //= DateTime->now(time_zone => 'local');
+    return $self->end < $dt;
+}
 
 __PACKAGE__->meta->make_immutable;
