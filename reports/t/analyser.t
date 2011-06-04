@@ -64,6 +64,9 @@ subtest marcg => sub {
         isa_ok $e[0], BonusReportEvent, 'event before reporting period';
         isa_ok $e[1], TimelyReportEvent, 'first report in reporting period';
         isa_ok $e[2], BonusReportEvent, 'second report in reporting period';
+
+        ok !$p->was_impolite;
+        ok !$p->was_naughty;
     }
 
     for my $p ($marcs_analysis->nth_period(1)) {
@@ -72,6 +75,9 @@ subtest marcg => sub {
         my @e = $p->events;
         is @e, 1;
         isa_ok $e[0], MissedExpectedDeadlineEvent;
+
+        ok $p->was_impolite;
+        ok !$p->was_naughty;
 
         is $marcs_analysis->expected_next_date,
            $marcs_analysis->nth_period(0)->expected_next_date;
@@ -139,6 +145,9 @@ subtest mo => sub {
         my @e = $p->events;
         is @e, 1;
         isa_ok $e[0], MissedDeadlineEvent;
+
+        ok $p->was_impolite;
+        ok $p->was_naughty;
     }
 
     for my $p ($moritz_analysis->nth_period(1)) {
@@ -158,6 +167,9 @@ subtest tadzik => sub {
         my @e = $p->events;
         is @e, 1;
         isa_ok $e[0], MissedDeadlineEvent;
+
+        ok $p->was_impolite;
+        ok $p->was_naughty;
     }
 
     for my $p ($tadeusz_analysis->nth_period(1)) {
