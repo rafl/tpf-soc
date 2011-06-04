@@ -77,6 +77,17 @@ method BUILD {
     $self->logger;
 }
 
+method execute {
+    try {
+        $self->run(@_);
+    }
+    catch {
+        $self->log_fatal(['Exception wile running command: %s', $_]);
+    };
+
+    return 0;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
