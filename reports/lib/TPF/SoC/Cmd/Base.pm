@@ -3,8 +3,11 @@ package TPF::SoC::Cmd::Base;
 use Moose;
 use syntax 'method';
 use TPF::SoC;
+use Try::Tiny;
 use FindBin '$Bin';
 use Path::Class;
+use Log::Dispatchouli;
+use MooseX::Types::Moose 'Bool';
 use MooseX::Types::Path::Class 'File';
 use namespace::autoclean;
 
@@ -48,8 +51,30 @@ method _build_container {
     });
 }
 
+has debug => (
+    is      => 'ro',
+    isa     => Bool,
+    default => 0,
+);
+
+has logger => (
+    is      => 'ro',
+    isa     => 'Log::Dispatchouli',
+    handles => qr/^log_/,
+    builder => '_build_logger',
+);
+
+method _build_logger {
+    Log::Dispatchouli->new({
+        to_stderr => 1,
+        debug     => $self->debug,
+        ident     => sprintf('%s/%s', $self->app->arg0, blessed $self),
+    });
+}
+
 method BUILD {
     $self->container;
+    $self->logger;
 }
 
 __PACKAGE__->meta->make_immutable;
