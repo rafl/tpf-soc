@@ -77,6 +77,29 @@ subtest marcg => sub {
     }
 };
 
+subtest gnusosa => sub {
+    my $carlos_analysis = $reporting_periods{gnusosa};
+
+    for my $p ($carlos_analysis->nth_period(0)) {
+        ok $p->finished( $c->analysis_time );
+        ok $p->has_events,
+            'every finished period must have at least one event';
+
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], TimelyReportEvent;
+    }
+
+    for my $p ($carlos_analysis->nth_period(1)) {
+        ok !$p->finished( $c->analysis_time );
+        ok $p->has_events;
+
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], TimelyReportEvent;
+    }
+};
+
 done_testing;
 
 __DATA__
