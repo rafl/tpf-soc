@@ -45,16 +45,21 @@ for my $nick (keys %reporting_periods) {
     is $reporting_periods{$nick}->n_periods, 2;
     isa_ok $_, 'TPF::SoC::ReportingPeriod'
         for $reporting_periods{$nick}->periods;
+
+    for my $p ($reporting_periods{$nick}->nth_period(0)) {
+        ok $p->finished( $c->analysis_time );
+        ok $p->has_events, 'every finished period must have at least one event';
+    }
+
+    for my $p ($reporting_periods{$nick}->nth_period(1)) {
+        ok !$p->finished( $c->analysis_time );
+    }
 }
 
 subtest marcg => sub {
     my $marcs_analysis = $reporting_periods{marcg};
 
     for my $p ($marcs_analysis->nth_period(0)) {
-        ok $p->finished( $c->analysis_time );
-        ok $p->has_events,
-            'every finished period must have at least one event';
-
         my @e = $p->events;
         is @e, 3;
         isa_ok $e[0], BonusReportEvent, 'event before reporting period';
@@ -63,7 +68,6 @@ subtest marcg => sub {
     }
 
     for my $p ($marcs_analysis->nth_period(1)) {
-        ok !$p->finished( $c->analysis_time );
         ok $p->has_events;
 
         my @e = $p->events;
@@ -81,17 +85,12 @@ subtest gnusosa => sub {
     my $carlos_analysis = $reporting_periods{gnusosa};
 
     for my $p ($carlos_analysis->nth_period(0)) {
-        ok $p->finished( $c->analysis_time );
-        ok $p->has_events,
-            'every finished period must have at least one event';
-
         my @e = $p->events;
         is @e, 1;
         isa_ok $e[0], TimelyReportEvent;
     }
 
     for my $p ($carlos_analysis->nth_period(1)) {
-        ok !$p->finished( $c->analysis_time );
         ok $p->has_events;
 
         my @e = $p->events;
