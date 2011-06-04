@@ -114,6 +114,24 @@ subtest andrewalker => sub {
     cmp_ok $andres_analysis->expected_next_date, '>', $c->analysis_time;
 };
 
+subtest Hugmeir => sub {
+    my $brians_analysis = $reporting_periods{Hugmeir};
+
+    for my $p ($brians_analysis->nth_period(0)) {
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], TimelyReportEvent;
+    }
+
+    for my $p ($brians_analysis->nth_period(1)) {
+        ok $p->has_events;
+
+        my @e = $p->events;
+        is @e, 1;
+        isa_ok $e[0], TimelyReportEvent;
+    }
+};
+
 done_testing;
 
 __DATA__
