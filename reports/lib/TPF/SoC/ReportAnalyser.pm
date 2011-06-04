@@ -63,6 +63,7 @@ method analyse (@reports) {
         } @reports_before_deadline;
 
         my @events;
+        my $seen_timely_report = 0;
         for my $report (@reports_before_deadline) {
             $next_expected_reporting_date = $self->_round_up_one_day(
                 $self->next_reporting_date(
@@ -70,8 +71,10 @@ method analyse (@reports) {
                 ),
             );
 
-            my $event_class = @reports_in_period > 1
-                ? BonusReportEvent : TimelyReportEvent;
+            my $event_class =
+                  $report->date < $last_reporting_start ? BonusReportEvent
+                : $seen_timely_report++                 ? BonusReportEvent
+                :                                         TimelyReportEvent;
 
             push @events, $event_class->new({
                 date               => $report->date,
