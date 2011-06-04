@@ -9,7 +9,7 @@ use MooseX::Types::Path::Class 'File';
 use MooseX::Types::DateTime DateTime => { -as => 'DateTimeType' }, 'Duration';
 use MooseX::Types::LoadableClass 'LoadableClass';
 use MooseX::Types::Common::String 'NonEmptySimpleStr';
-use TPF::SoC::Types qw(Student Report DateTimeSpan ReportAnalyser);
+use TPF::SoC::Types qw(Student Report DateTimeSpan ReportAnalyser ReportAnalysis ISO8601DateTime);
 use Bread::Board::Declare;
 use namespace::autoclean;
 
@@ -148,10 +148,17 @@ has student_reports => (
     },
 );
 
-has [map { "reporting_period_${_}" } qw(start end)] => (
-    is  => 'ro',
-    isa => DateTimeType,
-);
+for my $attr (map { "reporting_period_${_}" } qw(start end)) {
+    has $attr => (
+        is           => 'ro',
+        isa          => ISO8601DateTime,
+        coerce       => 1,
+        dependencies => ['config'],
+        block        => fun ($s) {
+            $s->param('config')->{$attr}
+        },
+    );
+}
 
 has reporting_period => (
     is           => 'ro',
@@ -162,8 +169,13 @@ has reporting_period => (
 );
 
 has reporting_interval => (
-    is  => 'ro',
-    isa => Duration,
+    is           => 'ro',
+    isa          => Duration,
+    coerce       => 1,
+    dependencies => ['config'],
+    block        => fun ($s) {
+        $s->param('config')->{reporting_interval};
+    },
 );
 
 has analysis_time => (
