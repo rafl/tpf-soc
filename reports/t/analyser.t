@@ -56,6 +56,7 @@ subtest marcg => sub {
             'every finished period must have at least one event';
 
         my @e = $p->events;
+        is @e, 3;
         isa_ok $e[0], BonusReportEvent, 'event before reporting period';
         isa_ok $e[1], TimelyReportEvent, 'first report in reporting period';
         isa_ok $e[2], BonusReportEvent, 'second report in reporting period';
@@ -66,6 +67,7 @@ subtest marcg => sub {
         ok $p->has_events;
 
         my @e = $p->events;
+        is @e, 1;
         isa_ok $e[0], MissedExpectedDeadlineEvent;
 
         is $marcs_analysis->expected_next_date,
