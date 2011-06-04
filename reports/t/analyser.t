@@ -10,6 +10,10 @@ use DateTime::Duration;
 use DateTime::Format::Mail;
 
 use TPF::SoC;
+use aliased 'TPF::SoC::ReportingPeriod::Event::Timely', 'TimelyReportEvent';
+use aliased 'TPF::SoC::ReportingPeriod::Event::Bonus', 'BonusReportEvent';
+use aliased 'TPF::SoC::ReportingPeriod::Event::MissedDeadline', 'MissedDeadlineEvent';
+use aliased 'TPF::SoC::ReportingPeriod::Event::MissedExpectedDeadline', 'MissedExpectedDeadlineEvent';
 
 my $students_list = dir($FindBin::Bin)->parent->file('students');
 
@@ -32,11 +36,39 @@ my $c = TPF::SoC->new({
     analysis_time      => DateTime::Format::Mail->parse_datetime('Fri, 03 Jun 2011 02:39:45 +0200'),
 });
 
-$c->report_analyser->analyse(
-    @{ $c->student_reports->{$_} }
-) for keys %{ $c->students };
+my %reporting_periods = map {
+    ($_ => $c->report_analyser->analyse(@{ $c->student_reports->{$_} }))
+} keys %{ $c->students };
 
-#diag explain [map { $c->student_reports->{$_} } keys %{ $c->students }];
+
+for my $nick (keys %reporting_periods) {
+    is @{ $reporting_periods{$nick} }, 2;
+    isa_ok $_, 'TPF::SoC::ReportingPeriod'
+        for @{ $reporting_periods{$nick} };
+}
+
+{
+    my $marcs_reports = $reporting_periods{marcg};
+
+    for my $p ($marcs_reports->[0]) {
+        ok $p->finished( $c->analysis_time );
+        ok $p->has_events,
+            'every finished period must have at least one event';
+
+        my @e = $p->events;
+        isa_ok $e[0], BonusReportEvent, 'event before reporting period';
+        isa_ok $e[1], TimelyReportEvent, 'first report in reporting period';
+        isa_ok $e[2], BonusReportEvent, 'second report in reporting period';
+    }
+
+    for my $p ($marcs_reports->[1]) {
+        ok !$p->finished( $c->analysis_time );
+        ok $p->has_events;
+
+        my @e = $p->events;
+        isa_ok $e[0], MissedExpectedDeadlineEvent;
+    }
+}
 
 done_testing;
 
