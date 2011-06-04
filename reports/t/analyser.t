@@ -67,6 +67,11 @@ for my $nick (keys %reporting_periods) {
 
         my @e = $p->events;
         isa_ok $e[0], MissedExpectedDeadlineEvent;
+
+        is $marcs_analysis->expected_next_date,
+           $marcs_analysis->nth_period(0)->expected_next_date;
+
+        cmp_ok $e[0]->date, '<', $marcs_analysis->expected_next_date;
     }
 }
 
