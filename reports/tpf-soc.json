@@ -1,0 +1,7 @@
+{
+  "reporting_period_start" : "2011-05-23T00:00:00.00+00:00",
+  "reporting_period_end"   : "2011-08-22T00:00:00.00+00:00",
+  "reporting_interval"     : {
+    "weeks" : 1
+  }
+}
