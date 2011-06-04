@@ -66,6 +66,10 @@ method analyse (@reports) {
         my @events;
         my $seen_timely_report = 0;
         for my $report (@reports_before_deadline) {
+            push @events, $self->_new_missed_expected_deadline_event(
+                $next_expected_reporting_date,
+            ) if $report->date > $next_expected_reporting_date;
+
             $next_expected_reporting_date = $self->_round_up_one_day(
                 $self->next_reporting_date(
                     $report->date->clone->truncate(to => 'day'),
@@ -87,12 +91,9 @@ method analyse (@reports) {
         unless (@reports_in_period) {
             if ($next_reporting_deadline > $now) {
                 if ($next_expected_reporting_date < $now) {
-                    # FIXME: generate those if one of the reports consumed
-                    # earlier was past its expected date
-                    push @events, MissedExpectedDeadlineEvent->new({
-                        date          => $now,
-                        expected_date => $next_expected_reporting_date,
-                    });
+                    push @events, $self->_new_missed_expected_deadline_event(
+                        $next_expected_reporting_date,
+                    );
                 }
                 # else { no report yet, but we didn't expect it yet anyway }
             }
@@ -124,6 +125,10 @@ method analyse (@reports) {
     return Analysis->new({
         periods => \@reporting_periods,
     });
+}
+
+method _new_missed_expected_deadline_event ($date) {
+    return MissedExpectedDeadlineEvent->new({ date => $date });
 }
 
 __PACKAGE__->meta->make_immutable;

@@ -60,12 +60,13 @@ subtest marcg => sub {
 
     for my $p ($marcs_analysis->nth_period(0)) {
         my @e = $p->events;
-        is @e, 3;
+        is @e, 4;
         isa_ok $e[0], BonusReportEvent, 'event before reporting period';
-        isa_ok $e[1], TimelyReportEvent, 'first report in reporting period';
-        isa_ok $e[2], BonusReportEvent, 'second report in reporting period';
+        isa_ok $e[1], MissedExpectedDeadlineEvent, 'missed expected date';
+        isa_ok $e[2], TimelyReportEvent, 'first report in reporting period';
+        isa_ok $e[3], BonusReportEvent, 'second report in reporting period';
 
-        ok !$p->was_impolite;
+        ok $p->was_impolite;
         ok !$p->was_naughty;
     }
 
@@ -82,7 +83,7 @@ subtest marcg => sub {
         is $marcs_analysis->expected_next_date,
            $marcs_analysis->nth_period(0)->expected_next_date;
 
-        cmp_ok $e[0]->date, '>', $marcs_analysis->expected_next_date;
+        cmp_ok $e[0]->date, '=', $marcs_analysis->expected_next_date;
     }
 };
 
