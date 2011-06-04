@@ -30,6 +30,16 @@ method expected_next_date {
     return $last_period_with_expectation->expected_next_date;
 }
 
+method last_report {
+    my $last_report_period = last_value {
+        try { $_->last_report }
+    } $self->periods;
+
+    die 'No report available'
+        unless $last_report_period;
+
+    return $last_report_period->last_report;
+}
 
 __PACKAGE__->meta->make_immutable;
 

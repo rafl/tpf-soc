@@ -10,6 +10,7 @@ use MooseX::Types::Moose 'ArrayRef';
 use TPF::SoC::Types 'DateTimeSpan', 'ReportingEvent';
 use aliased 'TPF::SoC::ReportingPeriod::Event::MissedDeadline', 'MissedDeadlineEvent';
 use aliased 'TPF::SoC::ReportingPeriod::Event::MissedExpectedDeadline', 'MissedExpectedDeadlineEvent';
+use aliased 'TPF::SoC::ReportingPeriod::Event::WithReport', 'EventWithReport';
 use aliased 'TPF::SoC::ReportingPeriod::Event::WithExpectedNextDate', 'EventWithExpectedNextDate';
 use namespace::autoclean;
 
@@ -44,6 +45,17 @@ method expected_next_date {
         unless $last_with_expected_date;
 
     return $last_with_expected_date->expected_next_date;
+}
+
+method last_report {
+    my $last_report_event = last_value {
+        does_role $_, EventWithReport
+    } $self->events;
+
+    die 'no report available'
+        unless $last_report_event;
+
+    return $last_report_event->report;
 }
 
 method was_naughty {
