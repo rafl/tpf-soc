@@ -1,0 +1,176 @@
+Organization id
+
+tpf
+
+
+Organization name
+
+The Perl Foundation
+
+
+Organization description
+
+The Perl Foundation is dedicated to the advancement of the Perl programming
+language through open discussion, collaboration, design, and code.
+
+The Perl Foundation coordinates the efforts of numerous grass-roots Perl-based
+groups, including:
+
+  * International Yet Another Perl Conferences
+  * Carries the legal responsibility for Perl 5 and Perl 6
+  * perl.org
+  * Perl Mongers
+  * PerlMonks
+
+The Perl Foundation is dedicated to the advancement of the Perl programming
+language through open discussion, collaboration, design, and code. The Perl
+Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
+
+
+Organization home page url
+
+http://perlfoundation.org/
+
+
+Main organization license
+
+GNU General Public License version 2.0 (GPLv2)
+
+
+Backup Admin
+
+mdk
+
+
+What is the URL for your Ideas page?
+
+http://wiki.enlightenedperl.org/gsoc2012/ideas
+
+
+What is the main IRC channel for your organization?
+
+irc://irc.perl.org/#soc-help
+
+
+What is the main development mailing list for your organization?
+
+tpf-gsoc@googlegroups.com
+
+
+Why is your organization applying to participate in Google Summer of Code 2012?
+What do you hope to gain by participating?
+
+Each year we participated in GSoC and GCI has been a extraordinary experience
+for both the students and the developers and we plan to repeat this great
+success.
+
+Besides getting a fair bit of important work done during the summer, one of our
+main focus points will be on getting students to know and interact with the
+different parts of our vast community and to do everything we can to encourage
+them stick around after the summer, becoming a part of the Perl world as well as
+the free software movement in general, just like we believe to have managed
+rather well with many of our previous students.
+
+
+Did your organization participate in past Google Summer of Codes? If so, please
+summarize your involvement and the successes and challenges of your
+participation.
+
+We participated in several GSoC and and all GCI programs so far. Our track
+record for the last few years that I could find data on looks like this:
+
+2011: 6 out of 6 students passed
+2010: 3/5
+2009: 8/9
+2008: 4/4
+
+Out of these, a large number of our passing students decided to stick around in
+the projects they've worked on or a continued to contribute to different
+projects within our community. Even one of the students we had to fail in the
+finals became one of our long term contributor since then.
+
+We used to struggle somewhat with not getting the work produced by our students
+merged into their respective projects in a timely manner, but we were able to
+improve this situation considerably in the last rounds. To my knowledge, none of
+last year's projects aren't either already shipped as part of an official
+release or at least being very close to being shipped in the very near future.
+
+For both my prospective backup admin Mark and myself, it'll be the second year
+of acting as an org-admin. Before that, I used to be involved as a mentor for
+both the Perl Foundation and XMMS2, as well as a student for XMMS2 in an earlier
+program. Many of our mentors have a similarly long experience with GSoC.
+
+
+If your organization has not previously participated in Google Summer of Code,
+have you applied in the past? If so, for what year(s)?
+
+n/a
+
+
+Does your organization have an application template you would like to see
+students use? If so, please provide it now.
+
+http://wiki.enlightenedperl.org/gsoc2011/application_template
+
+
+What criteria did you use to select your mentors for this year's program? Please
+be as specific as possible.
+
+There's many qualities we look for in our mentors, some of which include their
+level of involvement in their respective sub-communities, their previous GSoC
+and non-GSoC mentoring experience, their expected availability over the course
+of the summer, their activity on various communication channels such as IRC and
+mailing lists, but also how well they seem to be able to interact with their
+prospective student during the student application period.
+
+Given the size of our community, we've not yet had any major problems finding
+the right mentor for any project we wanted to accept. In fact, our mentoring
+resources are large enough to supply each of our students with at least two
+mentors overseeing their work, which we've had a great experience with
+previously.
+
+Additionally, we try to make our requirements for mentors as clear as possible
+right from the beginning and have written documentation for that available at
+https://github.com/rafl/tpf-soc/blob/master/mentors-guidelines
+
+
+What is your plan for dealing with disappearing students?
+
+We take every precaution we can think of to avoid a situation like that in the
+first place. Many of these are described in both our mentor guidelines at
+https://github.com/rafl/tpf-soc/blob/master/mentors-guidelines as well as our
+student guidelines at
+https://github.com/rafl/tpf-soc/blob/master/mentors-guidelines and include
+several ways of encouraging and. in fact, demanding very frequent communication,
+always having someone available for the student to speak to, even if there's a
+communication breakdown between student and mentors, as well as taking many
+measures to ensure we can detect a situation like this as early as possible.
+
+If all else fails, our measure of last resort is to fail the student as early as
+possible, cutting both our and Google's losses as early as we can.
+
+
+What is your plan for dealing with disappearing mentors?
+
+Similar to the previous two questions, our strategy for this boils down to
+stating requirements clearly upfront, demanding frequent communication, always
+having at least a third person paying close attention to how things are going,
+and attempting to catch possible problems as soon as we can.
+
+Should we run into a situation where both a student's primary and backup mentor
+disappears, we'll notice quickly and will act accordingly, such as by finding
+another suitable candidate in our big mentor pool or, with regret, abort the
+project.
+
+
+What steps will you take to encourage students to interact with your project's
+community before, during and after the program?
+
+TODO
+
+
+Are you a new organization who has a Googler or other organization to vouch for
+you? If so, please list their name(s) here.
+
+Are you an established or larger organization who would like to vouch for a new
+organization applying this year? If so, please list their name(s) here.
