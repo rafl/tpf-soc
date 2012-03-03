@@ -11,7 +11,8 @@ The Perl Foundation
 Organization description
 
 The Perl Foundation is dedicated to the advancement of the Perl programming
-language through open discussion, collaboration, design, and code.
+language through open discussion, collaboration, design, and code. The Perl
+Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
 
 The Perl Foundation coordinates the efforts of numerous grassroots Perl-based
 groups, including:
@@ -21,10 +22,6 @@ groups, including:
   * perl.org
   * Perl Mongers
   * PerlMonks
-
-The Perl Foundation is dedicated to the advancement of the Perl programming
-language through open discussion, collaboration, design, and code. The Perl
-Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
 
 
 Organization home page url
@@ -54,7 +51,7 @@ irc://irc.perl.org/#soc-help
 
 What is the main development mailing list for your organization?
 
-tpf-gsoc-students@googlegroups.com is our main GSoC list, but there's many
+tpf-gsoc-students@googlegroups.com is our main GSoC list, but there are many
 different development lists, given the TPF being an umbrella organisation.
 
 
@@ -144,7 +141,7 @@ We take every precaution we can think of to avoid a situation like that in the
 first place. Many of these are described in both our mentor guidelines at
 https://github.com/rafl/tpf-soc/blob/master/mentors-guidelines as well as our
 student guidelines at
-https://github.com/rafl/tpf-soc/blob/master/mentors-guidelines and include
+https://github.com/rafl/tpf-soc/blob/master/student-guidelines and include
 several ways of encouraging and, in fact, demanding very frequent communication,
 always having someone available for the student to speak to (even if there's a
 communication breakdown between student and mentors), as well as taking many
