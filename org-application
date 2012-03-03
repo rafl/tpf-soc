@@ -168,7 +168,37 @@ project.
 What steps will you take to encourage students to interact with your project's
 community before, during and after the program?
 
-TODO
+We try to engage with possible students very early, including being as present
+as we can in social media, distributing flyers in universities, and speaking
+about GSoC at conferences and in front of students at universities.
+
+These efforts seem to have been pretty successful already - we've had several
+students contact us in order to talk about their project ideas and to be put in
+touch with the core developers of sub-communities relevant to their interests,
+even though we're not even an accepted organisation yet.
+
+Once officially accepted as an organisation, we'd carry on giving prospective
+students a hand in getting in touch with our community by continuing to be
+responsive on our GSoC related IRC channels and mailing lists and by putting
+them in touch with possible mentors for their ideas as well as with our past
+students.
+
+After a student is accepted into the Summer of Code program, he'll be treated in
+the same friendly and and welcoming way that every new contributor gets to
+experience when joining the Perl community. Additionally, we'll try to assist
+our students, if they agree, in meeting up with others in the community in real
+life, be it at Perl Mongers meetings or one of our world wide conferences, to
+the best of our abilities.
+
+We do not have any GSoC specific plans on how to deal with our students after
+the summer. That mostly depends on their decision on whether or not to stay
+around in the community. If they decide to do so, they'll be treated in the same
+manner that everyone else is - respectful and friendly.
+
+We consider our stategy in getting people to get involved with the Perl world
+and becoming a part of it as rather successful. Many of our stidents decided to
+stick around even after the summer, remaining important contributors to many
+different projects, even years after their participation in the Summer of Code.
 
 
 Are you a new organization who has a Googler or other organization to vouch for
