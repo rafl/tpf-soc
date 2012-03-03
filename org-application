@@ -13,18 +13,16 @@ Organization description
 The Perl Foundation is dedicated to the advancement of the Perl programming
 language through open discussion, collaboration, design, and code.
 
-The Perl Foundation coordinates the efforts of numerous grassroots Perl-based
+The Perl Foundation carries the legal responsibility for Perl 5 and Perl 6
+and coordinates the efforts of numerous grassroots Perl-based
 groups, including:
 
   * International Yet Another Perl Conferences (YAPC)
-  * Carries the legal responsibility for Perl 5 and Perl 6
   * perl.org
   * Perl Mongers
   * PerlMonks
 
-The Perl Foundation is dedicated to the advancement of the Perl programming
-language through open discussion, collaboration, design, and code. The Perl
-Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
+The Perl Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
 
 
 Organization home page url
@@ -61,45 +59,46 @@ different development lists, given the TPF being an umbrella organisation.
 Why is your organization applying to participate in Google Summer of Code 2012?
 What do you hope to gain by participating?
 
-Each year we have participated in GSoC and GCI has been a extraordinary
+Each year that we have participated in GSoC and GCI has been an extraordinary
 experience for both the students and the developers and we plan to repeat this
 great success.
 
 Besides getting a fair bit of important work done during the summer, one of our
-main focus points will be on getting students to know and interact with the
-different parts of our vast community and to do everything we can to encourage
-them stick around after the summer, becoming a part of the Perl world as well as
-the free software movement in general, just like we believe to have managed
-rather well with many of our previous students.
+main focus points will be helping our students to know and interact with the
+different parts of our vast community.  We do everything we can to encourage
+them to stay involved with their project and with the community after the summer
+has finished, and to become a part of the Perl world as well as the free software 
+movement in general. We have had great success in doing so with many of our previous
+students.
 
 
 Did your organization participate in past Google Summer of Codes? If so, please
 summarize your involvement and the successes and challenges of your
 participation.
 
-We participated in several GSoC and and all GCI programs so far. Our track
-record for the last few years that I could find data on looks like this:
+We have participated in several GSoC and and all GCI programs so far. Our track
+record for previous years is as follows:
 
 2011: 6 out of 6 students passed
 2010: 3/5
 2009: 8/9
 2008: 4/4
 
-(we also participated in 2005 and 2006, but I don't have any numbers for those
-years)
+(We also participated in 2005 and 2006, but I don't have any numbers for those
+years.)
 
-Out of these, a large number of our passing students have decided to stick
-around in the projects they've worked on or have continued to contribute to
-different projects within our community. Even one of the students we had to fail
+Out of these, a large number of our passing students have decided to stay 
+involved in their projects or have continued to contribute to different 
+projects within our community. Even one of the students we had to fail
 in the finals has gone on to become one of our long term contributors.
 
 We used to struggle somewhat with not getting the work produced by our students
 merged into their respective projects in a timely manner, but we were able to
-improve this situation considerably in the last rounds. To my knowledge, none of
-last year's projects aren't either already shipped as part of an official
+improve this situation considerably in the last rounds. To my knowledge, all of
+last year's projects are either already shipped as part of an official
 release or at least being very close to being shipped in the very near future.
 
-For both my prospective backup admin Mark and myself, it'll be the second year
+For both my prospective backup admin, Mark, and myself, it'll be the second year
 of acting as an org-admin. Before that, I used to be involved as a mentor for
 both the Perl Foundation and XMMS2, as well as a student for XMMS2 in an earlier
 program. Many of our mentors have a similarly long experience with GSoC.
