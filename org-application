@@ -14,14 +14,25 @@ The Perl Foundation is dedicated to the advancement of the Perl programming
 language through open discussion, collaboration, design, and code. The Perl
 Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
 
-The Perl Foundation carries the legal responsibility for Perl 5 and Perl 6
-and coordinates the efforts of numerous grassroots Perl-based
-groups, including:
+The Perl Foundation coordinates the efforts of numerous grass-roots Perl-based
+groups including International Yet Another Perl Conferences (YAPC), and
+carries the legal responsibility for Perl 5, Perl 6, perl.org, Perl Mongers
+and PerlMonks.
 
-  * International Yet Another Perl Conferences (YAPC)
-  * perl.org
-  * Perl Mongers
-  * PerlMonks
+Its purposes are:
+
+  * cultivating a collaborative open source community and an ecosystem of
+    computer language implementations collectively known as "Perl" and
+    complementary tools, libraries, extensions, and applications around Perl
+  * offering Perl to members of the general public through the use of open
+    source licensing
+  * educating members of the general public in the application of Perl
+  * advancing Perl through scientific research and development
+  * protecting the intellectual property of Perl
+  * receiving and administering funds to aid, support and assist by gifts,
+    grants, contributions or otherwise other persons or organizations of any
+    kind, provided that such activities are consistent with the foregoing
+    purposes.
 
 
 Organization home page url
@@ -82,9 +93,8 @@ record for the previous Summer of Code years is as follows:
 2010: 3/5
 2009: 8/9
 2008: 4/4
-
-(We also participated in 2005 and 2006, but I don't have any numbers for those
-years.)
+2006: 5/5
+2005: 8 students entered, not sure how many passed
 
 Out of these, a large number of our passing students have decided to stay
 involved in their projects or have continued to contribute to different
@@ -95,7 +105,7 @@ We used to struggle somewhat with not getting the work produced by our students
 merged into their respective projects in a timely manner, but we were able to
 improve this situation considerably in the last rounds. To my knowledge, all of
 last year's projects are either already shipped as part of an official
-release or are very close to being shipped in the very near future.
+release or are close to being shipped in the very near future.
 
 For both my prospective backup admin, Mark, and myself, it'll be the second year
 of acting as an org-admin. Before that, I used to be involved as a mentor for
@@ -129,7 +139,7 @@ Given the size of our community, we've not yet had any major problems finding
 the right mentor for any project we wanted to accept. In fact, our mentoring
 resources are large enough to supply each of our students with at least two
 mentors overseeing their work, which we've had a great experience with
-previously.
+previously.  For GCI we had a pool of 50 mentors available to help students.
 
 Additionally, we try to make our requirements for mentors as clear as possible
 right from the beginning and have written documentation available for them at
