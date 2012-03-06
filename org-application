@@ -14,14 +14,25 @@ The Perl Foundation is dedicated to the advancement of the Perl programming
 language through open discussion, collaboration, design, and code. The Perl
 Foundation is a non-profit, 501(c)(3) organization based in Holland, Michigan.
 
-The Perl Foundation carries the legal responsibility for Perl 5 and Perl 6
-and coordinates the efforts of numerous grassroots Perl-based
-groups, including:
+The Perl Foundation coordinates the efforts of numerous grass-roots Perl-based
+groups including International Yet Another Perl Conferences (YAPC), and
+carries the legal responsibility for Perl 5, Perl 6, perl.org, Perl Mongers
+and PerlMonks.
 
-  * International Yet Another Perl Conferences (YAPC)
-  * perl.org
-  * Perl Mongers
-  * PerlMonks
+Its purposes are:
+
+  * cultivating a collaborative open source community and an ecosystem of
+    computer language implementations collectively known as "Perl" and
+    complementary tools, libraries, extensions, and applications around Perl
+  * offering Perl to members of the general public through the use of open
+    source licensing
+  * educating members of the general public in the application of Perl
+  * advancing Perl through scientific research and development
+  * protecting the intellectual property of Perl
+  * receiving and administering funds to aid, support and assist by gifts,
+    grants, contributions or otherwise other persons or organizations of any
+    kind, provided that such activities are consistent with the foregoing
+    purposes.
 
 
 Organization home page url
