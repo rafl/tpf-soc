@@ -2,5 +2,5 @@
 
 In this repository there are some useful documents/guidelines/programs for organizing the Google Summer of Code for the Perl Foundation.
 
-* [Students guidelines](student-guidelines)
-* [Mentor guidelines](mentors-guidelines)
+* [Students guidelines](guidelines/students.md)
+* [Mentor guidelines](guidelines/mentors.md)
