@@ -37,7 +37,7 @@ Community bonding period
 
 Now that you're accepted the summer of code program suggests that you prepare
 yourself for the coming tasks. Some of your projects require preliminary
-work. Make sure you'll manage to finish that before the coding period
+work. Make sure you'll manage to finish that before the coding period
 starts. Familiarise yourself with the version control system being used for the
 project you're working on, find out what coding style you're expected to use,
 etc.
@@ -61,8 +61,8 @@ and as well as we can. For that, it's critical to know what you're up to.
 
 To ensure we're not missing out on anything, we need you to update us on your
 progress on a regular basis. We ask you to do this by sending an email to both
-of your mentors as well as the tpf-gsoc-students@googlegroups.com [mailing list](https://groups.google.com/forum/#!forum/tpf-gsoc-students) 
-at the beginning of each week. 
+of your mentors as well as the tpf-gsoc-students@googlegroups.com [mailing list](https://groups.google.com/forum/#!forum/tpf-gsoc-students) and 
+tpf-gsoc@googlegroups.com [mailing list](https://groups.google.com/forum/#!forum/tpf-gsoc) at the beginning of each week. 
 
 Start by the beginning of the coding period at latest, but of course 
 we'd also love to hear what you're up to in the community bonding period, 
