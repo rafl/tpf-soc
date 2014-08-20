@@ -164,3 +164,9 @@ your mentors' response times, the amount of guidance they give you, or the way
 they communicate, tell them! If that doesn't help, drop me an email describing
 your problem and we'll get it sorted out. Don't be shy - we love feedback and
 want to improve.
+
+Code Submission
+===========
+
+For the code submission phase that start on 22 August and ends at 19 September 2014, 
+there are some guidelines that can be found [here](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2014/codeguidelines).
